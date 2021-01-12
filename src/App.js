@@ -1,8 +1,8 @@
 import React from "react";
-import MovieCard from "./MovieCard";
+import MovieCard from "./components/MovieCard";
 import "react-bootstrap";
 import "./Main.css";
-import Description from "./Description";
+import Description from "./components/Description";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function App() {
@@ -11,7 +11,7 @@ function App() {
       <Router>
         <Switch>
           <Route exact path="/" component={MovieCard} />
-          <Route path="/description" component={Description} />
+          <Route exact path="/description/:id" component={Description} />
         </Switch>
       </Router>
     </div>
